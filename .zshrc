@@ -71,7 +71,7 @@ ZSH_THEME="risto"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker kubectl podman)
+plugins=(git docker kubectl podman direnv)
 
 # Source Oh-My-Zsh
 if [ -f $ZSH/oh-my-zsh.sh ]; then
@@ -109,14 +109,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias gs='git status'
-alias ga='git add .'
-alias gc='git commit -m '
-alias gac='ga && gc'
-alias gd='git diff'
-alias gp='git push'
-alias gl='git log --oneline --graph --all'
-alias gr='git rebase -i HEAD~2'
 alias k='kubectl'
 alias da='direnv allow'
 

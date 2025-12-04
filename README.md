@@ -4,10 +4,20 @@ This depo contain all personnel configuration file for zsh, git and vim.
 ## Setup
 The setup script use different packet manager to install, if necessary `zsh`, `vim`, and `Oh-My-Zsh`.
 ```bash
-git clone https://github.com/skh/dotfiles.git ~/dotfiles
+git clone https://github.com/KharitonoffSamuel/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./setup.sh
 ```
+
+## ZSH plugins
+[Oh-My-Zsh repository](https://github.com/ohmyzsh/ohmyzsh)
+### Git
+[Alias git plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+### Kubernetes
+[Alias kubernetes plugin]()
+### Direnv
+[Alias direnv plugin]()
+
 
 ## Alias of zsh
 | Shortcut  | Normal                         |
@@ -15,12 +25,5 @@ cd ~/dotfiles
 | ll        | ls -alF                        |
 | la        | ls -A                          |
 | l         | ls -CF                         |
-| gs        | git status                     |
-| ga        | git add .                      |
-| gc        | git commit -m                  |
-| gac       | git add . && git commit -m     |
-| gd        | git diff                       |
-| gp        | git push                       |
-| gl        | git log --oneline --graph --all|
 | k         | kubectl                        |
 | da        | direnv allow                   |
