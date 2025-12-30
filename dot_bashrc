@@ -6,3 +6,5 @@ set expandtab
 set autoindent
 
 set -o vi
+
+eval "$(mise activate bash)"
