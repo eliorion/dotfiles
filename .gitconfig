@@ -24,3 +24,5 @@
     cm = commit
     st = status
     lg = log --graph --oneline --all
+[credential]
+        helper = !'/usr/local/bin/devpod' agent git-credentials --port 12049

@@ -42,14 +42,9 @@ cp .gitconfig ~/.gitconfig
 cp .vimrc ~/.vimrc
 
 echo "=== Configuration du shell par défaut (zsh) ==="
-if [ "$SHELL" != "/bin/zsh" ] && [ "$SHELL" != "$(which zsh)" ]; then
-    chsh -s "$(which zsh)" || echo "Impossible de changer le shell automatiquement."
+if [ "$SHELL" != "/bin/zsh" ] && [ "$SHELL" != "$(command -v zsh)" ]; then
+    chsh -s "$(command -v zsh)" || echo "Impossible de changer le shell automatiquement."
 fi
 
-if [[ "$(uname)" == "Darwin" ]]; then
-    ./keyboard/macos.sh
-else
-    ./keyboard/linux.sh
-fi
 
 echo "=== Installation terminée ==="
