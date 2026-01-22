@@ -1,0 +1,26 @@
+# === Direnv hook ===
+eval "$(direnv hook zsh)"
+
+# === Aliases utiles ===
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gs='git status'
+alias gd='git diff'
+alias gp='git push'
+alias gl='git log --oneline --graph --all'
+alias k='kubectl'
+
+#%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/skh/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Enable starship
+eval "$(starship init zsh)"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/skh/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
