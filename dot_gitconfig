@@ -1,0 +1,26 @@
+[user]
+    name = Eliorion
+    email = samuel.kharitonoff@edu.esiee.fr
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[branch]
+	autoSetupMerge = true
+    
+[core]
+    editor = vim
+    autocrlf = input
+
+[alias]
+    co = checkout
+    br = branch
+    cm = commit
+    st = status
+    lg = log --graph --oneline --all
