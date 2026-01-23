@@ -1,3 +1,98 @@
+# ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
+
+
+# ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+PURE_GIT_PULL=0
+
+
+# enable zsh vi-mode
+bindkey -v
+export KEYTIMEOUT=1 # make switching between modes faster
+
+
+# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+export LANG="en_US.UTF-8"
+
+
+# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if command -v mise > /dev/null ; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
+
+# ~~~~~~~~~~~~~~~ Starship ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# Enable starship
+if command -v starship > /dev/null ; then
+  eval "$(starship init zsh)"
+fi
+
+
+# ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
+
+fpath+=~/.zfunc
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
+autoload -Uz compinit 
+compinit -u
+
+zstyle ':completion:*' menu select
+
+if command -v fzf > /dev/null ; then
+  source <(fzf --zsh)
+fi
+
+if command -v flux > /dev/null ; then
+  source <(flux completion zsh)
+fi
+
+if command -v kubectl > /dev/null ; then
+  source <(kubectl completion zsh)
+  alias k="kubectl"
+fi
+
+if command -v mise > /dev/null ; then
+  source <(mise completion zsh)
+fi
+
+if [[ -d .zsh/zsh-autosuggestions ]] ; then
+  source .zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+
+# ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+alias v=vim
+
+if command -v bat > /dev/null ; then
+  alias cat="bat"
+fi
+
+if command -v lsd > /dev/null ; then
+  alias ls="lsd"
+  alias ll="ls -lgh"
+  alias la='ls -lathr'
+  alias lla='ls -lgha'
+  alias lt='ls --tree'
+fi
+
+
+
 # === Direnv hook ===
 eval "$(direnv hook zsh)"
 
@@ -9,7 +104,6 @@ alias gs='git status'
 alias gd='git diff'
 alias gp='git push'
 alias gl='git log --oneline --graph --all'
-alias k='kubectl'
 
 #%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/skh/.docker/completions $fpath)
@@ -17,8 +111,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# Enable starship
-eval "$(starship init zsh)"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/skh/.rd/bin:$PATH"

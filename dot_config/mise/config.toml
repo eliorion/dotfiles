@@ -1,4 +1,8 @@
 [tools]
-bat = "latest"
+bat = "0.25.0"
 chezmoi = "latest"
 starship = "1.24.2"
+btop = "1.4.4"
+fd = "10.2.0"
+fzf = "0.62.0"
+ripgrep = "14.1.1"
