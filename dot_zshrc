@@ -22,6 +22,15 @@ export KEYTIMEOUT=1 # make switching between modes faster
 
 export LANG="en_US.UTF-8"
 
+# (neo)vim
+if command -v nvim > /dev/null ; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+elif command -v vim > /dev/null ; then
+  export EDITOR="vim"
+  export VISUAL="vim"
+fi
+
 
 # ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -41,16 +50,18 @@ fi
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
-fpath+=~/.zfunc
+# add user local completion folder to fpath
+fpath+=(~/.zsh/completion)
+
+#%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/skh/.docker/completions $fpath)
+
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
 
-autoload -Uz compinit 
-compinit -u
-
-zstyle ':completion:*' menu select
+autoload -Uz compinit && compinit -i
 
 if command -v fzf > /dev/null ; then
   source <(fzf --zsh)
@@ -107,12 +118,12 @@ alias gl='git log --oneline --graph --all'
 
 #%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/skh/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/skh/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
+# syntax highlighting needs to be at the end because of reasons
+if [[ -d .zsh/zsh-syntax-highlighting ]] ; then
+  source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
