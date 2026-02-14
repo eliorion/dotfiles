@@ -6,4 +6,4 @@ fd = "10.2.0"
 fzf = "0.62.0"
 ripgrep = "14.1.1"
 tmux = "3.6a"
-
+direnv = "latest"
