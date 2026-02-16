@@ -37,7 +37,7 @@ alias l='ls -CF'
 # some aliases
 alias gs='git status'
 alias gaa='git add .'
-alias gcam√'git commit -a -m'
+alias gcam='git commit -a -m'
 alias gp='git push'
 
 alias k='kubectl'
