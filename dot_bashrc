@@ -34,6 +34,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# some aliases
+alias gs='git status'
+alias gaa='git add .'
+alias gcam√'git commit -a -m'
+alias gp='git push'
+
+alias k='kubectl'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
