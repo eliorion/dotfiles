@@ -35,10 +35,12 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # some aliases
-alias gs='git status'
 alias gaa='git add .'
 alias gcam='git commit -a -m'
 alias gp='git push'
+alias gs='git status'
+alias gd='git diff'
+alias gl='git log --oneline --graph --all'
 
 alias k='kubectl'
 
