@@ -28,6 +28,18 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# Alias for vim and nvim
+# (neo)vim
+if command -v nvim > /dev/null ; then
+  alias v="nvim"
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+elif command -v vim > /dev/null ; then
+  alias v="vim"
+  export EDITOR="vim"
+  export VISUAL="vim"
+fi
+
 
 # some more ls aliases
 alias ll='ls -alF'
