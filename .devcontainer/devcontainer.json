@@ -3,5 +3,8 @@
     "context": "..",
     "dockerfile": "Dockerfile"
   },
+  "containerEnv": {
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
+  },
   "postCreateCommand": "scripts/setup",
 }
