@@ -36,6 +36,7 @@ fi
 
 # ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
 
+export PATH="$HOME/.local/bin:$PATH"
 
 if command -v mise > /dev/null ; then
   eval "$($HOME/.local/bin/mise activate zsh)"
@@ -89,8 +90,6 @@ fi
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-alias v=vim
 
 if command -v bat > /dev/null ; then
   alias cat="bat"
