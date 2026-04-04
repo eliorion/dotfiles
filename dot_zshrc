@@ -122,10 +122,6 @@ alias gl='git log --oneline --graph --all'
 #%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/skh/.docker/completions $fpath)
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/skh/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # enable direnv
 eval "$(direnv hook zsh)"
 

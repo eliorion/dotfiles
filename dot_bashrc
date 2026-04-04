@@ -12,6 +12,9 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+# enable the vi mode in the shell
+set -o vi
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
