@@ -23,4 +23,4 @@ command -v chezmoi >/dev/null && chezmoi apply "$HOME/.claude/CLAUDE.md"
 
 # Build graphify knowledge graph for this dotfiles repo (AST-only, no LLM needed)
 # Run /graphify --update in Claude Code to add semantic layer
-graphify update .
+graphify update /workspaces/$DEVPOD_WORKSPACE_ID
