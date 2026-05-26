@@ -14,5 +14,8 @@ rtk init -g --auto-patch
 # Caveman - plugin + SessionStart/UserPromptSubmit hooks + statusline
 curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
 
+# Wire graphify to Claude Code (must run after Claude Code is installed)
+graphify claude install
+
 # Reassert chezmoi-managed ~/.claude/CLAUDE.md (rtk init -g overwrites it with @RTK.md only)
 command -v chezmoi >/dev/null && chezmoi apply "$HOME/.claude/CLAUDE.md"
