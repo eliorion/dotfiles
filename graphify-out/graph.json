@@ -1,0 +1,597 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "claude_code_global_principles",
+        "label": "Claude Code Global Coding Principles",
+        "nodes": [
+          "principle_think_before_coding",
+          "principle_simplicity_first",
+          "principle_surgical_changes",
+          "principle_goal_driven_execution"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "dot_claude/CLAUDE.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "dot_wezterm.lua",
+      "file_type": "code",
+      "source_file": "dot_wezterm.lua",
+      "source_location": "L1",
+      "id": "dot_wezterm_lua",
+      "community": 6,
+      "norm_label": "dot_wezterm.lua"
+    },
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "id": "claude_settings_json",
+      "community": 3,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 3,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 3,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 4,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 4,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 4,
+      "norm_label": "allow"
+    },
+    {
+      "label": "devcontainer.json",
+      "file_type": "code",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L1",
+      "id": "devcontainer_devcontainer_json",
+      "community": 1,
+      "norm_label": "devcontainer.json"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L2",
+      "id": "devcontainer_devcontainer_build",
+      "community": 1,
+      "norm_label": "build"
+    },
+    {
+      "label": "context",
+      "file_type": "code",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L3",
+      "id": "devcontainer_devcontainer_build_context",
+      "community": 1,
+      "norm_label": "context"
+    },
+    {
+      "label": "dockerfile",
+      "file_type": "code",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L4",
+      "id": "devcontainer_devcontainer_build_dockerfile",
+      "community": 1,
+      "norm_label": "dockerfile"
+    },
+    {
+      "label": "postCreateCommand",
+      "file_type": "code",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L6",
+      "id": "devcontainer_devcontainer_postcreatecommand",
+      "community": 1,
+      "norm_label": "postcreatecommand"
+    },
+    {
+      "label": "options.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/config/options.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_config_options_lua",
+      "community": 7,
+      "norm_label": "options.lua"
+    },
+    {
+      "label": "extras.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/plugins/extras.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_plugins_extras_lua",
+      "community": 8,
+      "norm_label": "extras.lua"
+    },
+    {
+      "label": "disabled.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/plugins/disabled.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_plugins_disabled_lua",
+      "community": 9,
+      "norm_label": "disabled.lua"
+    },
+    {
+      "label": "colorscheme.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/plugins/colorscheme.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_plugins_colorscheme_lua",
+      "community": 10,
+      "norm_label": "colorscheme.lua"
+    },
+    {
+      "label": "snacks.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/plugins/snacks.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_plugins_snacks_lua",
+      "community": 11,
+      "norm_label": "snacks.lua"
+    },
+    {
+      "label": "lazygit.lua",
+      "file_type": "code",
+      "source_file": "dot_config/nvim/lua/plugins/lazygit.lua",
+      "source_location": "L1",
+      "id": "dot_config_nvim_lua_plugins_lazygit_lua",
+      "community": 12,
+      "norm_label": "lazygit.lua"
+    },
+    {
+      "label": "Dotfiles README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "KharitonoffSamuel",
+      "contributor": null,
+      "id": "readme_dotfiles",
+      "community": 5,
+      "norm_label": "dotfiles readme"
+    },
+    {
+      "label": "Project CLAUDE.md (RTK Instructions)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_project",
+      "community": 0,
+      "norm_label": "project claude.md (rtk instructions)"
+    },
+    {
+      "label": "Global CLAUDE.md (Claude Code Instructions)",
+      "file_type": "document",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dot_claude_claude_md",
+      "community": 2,
+      "norm_label": "global claude.md (claude code instructions)"
+    },
+    {
+      "label": "RTK (Rust Token Killer)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "rtk_tool",
+      "community": 0,
+      "norm_label": "rtk (rust token killer)"
+    },
+    {
+      "label": "Graphify Knowledge Graph Tool",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_tool",
+      "community": 0,
+      "norm_label": "graphify knowledge graph tool"
+    },
+    {
+      "label": "RTK Token Savings Golden Rule",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": "line 4-15",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "rtk_token_savings_principle",
+      "community": 0,
+      "norm_label": "rtk token savings golden rule"
+    },
+    {
+      "label": "RTK.md Reference File",
+      "file_type": "document",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 1",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "rtk_md_file",
+      "community": 0,
+      "norm_label": "rtk.md reference file"
+    },
+    {
+      "label": "Think Before Coding Principle",
+      "file_type": "rationale",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 11-19",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "principle_think_before_coding",
+      "community": 2,
+      "norm_label": "think before coding principle"
+    },
+    {
+      "label": "Simplicity First Principle",
+      "file_type": "rationale",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 21-30",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "principle_simplicity_first",
+      "community": 2,
+      "norm_label": "simplicity first principle"
+    },
+    {
+      "label": "Surgical Changes Principle",
+      "file_type": "rationale",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 32-47",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "principle_surgical_changes",
+      "community": 2,
+      "norm_label": "surgical changes principle"
+    },
+    {
+      "label": "Goal-Driven Execution Principle",
+      "file_type": "rationale",
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 49-65",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "principle_goal_driven_execution",
+      "community": 2,
+      "norm_label": "goal-driven execution principle"
+    },
+    {
+      "label": "Oh-My-Zsh",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": "line 18",
+      "source_url": "https://github.com/ohmyzsh/ohmyzsh",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ohmyzsh",
+      "community": 5,
+      "norm_label": "oh-my-zsh"
+    },
+    {
+      "label": "Setup Script (setup.sh)",
+      "file_type": "code",
+      "source_file": "README.md",
+      "source_location": "line 11",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "setup_sh",
+      "community": 5,
+      "norm_label": "setup script (setup.sh)"
+    },
+    {
+      "label": "graphify-out/ Knowledge Graph Directory",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": "line 141",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_out_dir",
+      "community": 0,
+      "norm_label": "graphify-out/ knowledge graph directory"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_json",
+      "target": "claude_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "devcontainer_devcontainer_json",
+      "target": "devcontainer_devcontainer_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "devcontainer_devcontainer_json",
+      "target": "devcontainer_devcontainer_postcreatecommand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "devcontainer_devcontainer_build",
+      "target": "devcontainer_devcontainer_build_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".devcontainer/devcontainer.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "devcontainer_devcontainer_build",
+      "target": "devcontainer_devcontainer_build_dockerfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 18",
+      "weight": 1.0,
+      "source": "readme_dotfiles",
+      "target": "ohmyzsh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 11",
+      "weight": 1.0,
+      "source": "readme_dotfiles",
+      "target": "setup_sh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 1-138",
+      "weight": 1.0,
+      "source": "claude_md_project",
+      "target": "rtk_tool"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 140-149",
+      "weight": 1.0,
+      "source": "claude_md_project",
+      "target": "graphify_tool"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 141",
+      "weight": 1.0,
+      "source": "claude_md_project",
+      "target": "graphify_out_dir"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": null,
+      "weight": 0.8,
+      "source": "dot_claude_claude_md",
+      "target": "claude_md_project"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "dot_claude_claude_md",
+      "target": "rtk_md_file"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 11-19",
+      "weight": 1.0,
+      "source": "dot_claude_claude_md",
+      "target": "principle_think_before_coding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 21-30",
+      "weight": 1.0,
+      "source": "dot_claude_claude_md",
+      "target": "principle_simplicity_first"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 32-47",
+      "weight": 1.0,
+      "source": "dot_claude_claude_md",
+      "target": "principle_surgical_changes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 49-65",
+      "weight": 1.0,
+      "source": "dot_claude_claude_md",
+      "target": "principle_goal_driven_execution"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 4-15",
+      "weight": 1.0,
+      "source": "rtk_tool",
+      "target": "rtk_token_savings_principle"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "dot_claude/CLAUDE.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "rtk_md_file",
+      "target": "rtk_tool"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "claude_code_global_principles",
+      "label": "Claude Code Global Coding Principles",
+      "nodes": [
+        "principle_think_before_coding",
+        "principle_simplicity_first",
+        "principle_surgical_changes",
+        "principle_goal_driven_execution"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "dot_claude/CLAUDE.md"
+    }
+  ],
+  "built_at_commit": "14704da7b35c9a1b04043b7b88028f0dd4c97c6c"
+}
