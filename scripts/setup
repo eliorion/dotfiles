@@ -15,12 +15,13 @@ rtk init -g --auto-patch
 curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
 
 # Graphify - install package via uv (uv provided by mise), then wire to Claude Code
-uv tool install graphifyy
-graphify claude install
+#uv tool install graphifyy
+#graphify install
+#graphify claude install
 
 # Reassert chezmoi-managed ~/.claude/CLAUDE.md (rtk init -g overwrites it with @RTK.md only)
-command -v chezmoi >/dev/null && chezmoi apply "$HOME/.claude/CLAUDE.md"
+#command -v chezmoi >/dev/null && chezmoi apply "$HOME/.claude/CLAUDE.md"
 
 # Build graphify knowledge graph for this dotfiles repo (AST-only, no LLM needed)
 # Run /graphify --update in Claude Code to add semantic layer
-graphify update /workspaces/$DEVPOD_WORKSPACE_ID
+#graphify update /workspaces/$DEVPOD_WORKSPACE_ID
