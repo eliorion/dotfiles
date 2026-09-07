@@ -1,0 +1,11 @@
+[".tmux/plugins/tmux-resurrect"]
+type = "archive"
+url = "https://github.com/tmux-plugins/tmux-resurrect/archive/refs/tags/v4.0.0.tar.gz"
+stripComponents = 1
+refreshPeriod = "8760h"
+
+[".tmux/plugins/tmux-continuum"]
+type = "archive"
+url = "https://github.com/tmux-plugins/tmux-continuum/archive/refs/tags/v3.1.0.tar.gz"
+stripComponents = 1
+refreshPeriod = "8760h"
