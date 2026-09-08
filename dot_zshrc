@@ -119,6 +119,9 @@ alias gd='git diff'
 alias gp='git push'
 alias gl='git log --oneline --graph --all'
 
+alias clauded='claude --dangerously-skip-permissions'
+alias claudedr='claude --dangerously-skip-permissions --resume'
+
 #%  > '# The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/skh/.docker/completions $fpath)
 
