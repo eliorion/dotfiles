@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# dcx - run a command inside this project's devpod workspace, at the matching path.
+#
+# workmux creates git worktrees and tmux windows on the host, but the agent has
+# to run in the project's container. This maps the host worktree path to its
+# path inside the workspace and starts the command there.
+set -euo pipefail
+
+# --git-common-dir points at the main repository's .git even from inside a
+# worktree, so every worktree of a project resolves to the same workspace.
+root=$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")
+ws=${WORKMUX_DEVPOD_WS:-$(basename "$root")}
+
+rel=${PWD#"$root"}
+rel=${rel#/}
+remote="/workspaces/$ws${rel:+/$rel}"
+
+devpod up "$ws" --ide none >/dev/null
+exec devpod ssh "$ws" --command "cd '$remote' && exec ${*:-bash -l}"

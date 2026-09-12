@@ -24,3 +24,9 @@
     cm = commit
     st = status
     lg = log --graph --oneline --all
+
+[worktree]
+    # Store worktree .git pointers as relative paths so a worktree stays valid
+    # both on the host and inside a devcontainer, which mount the repo at
+    # different absolute paths. Requires git >= 2.48.
+    useRelativePaths = true

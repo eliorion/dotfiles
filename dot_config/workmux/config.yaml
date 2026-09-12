@@ -1,0 +1,7 @@
+# Worktrees are created inside the repository so the devcontainer bind mount
+# sees them. The default is a sibling directory '<project>__worktrees'.
+worktree_dir: .worktrees
+
+# Agents run inside the project's devpod workspace, not on the host.
+# The default is "claude".
+agent: dcx claude
