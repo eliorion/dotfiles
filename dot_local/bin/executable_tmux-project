@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# tmux-project - pick a git repository and attach a tmux session named after it.
+#
+# Repositories live under several roots (personal account, organisation
+# account), so the roots are configurable. Override with a colon-separated
+# TMUX_PROJECT_ROOTS, e.g. "$HOME/perso:$HOME/org".
+set -euo pipefail
+
+IFS=':' read -r -a roots <<<"${TMUX_PROJECT_ROOTS:-$HOME}"
+
+# A worktree's .git is a file, not a directory, so --type d lists only real
+# repositories and never the worktrees inside them.
+repo=$(
+  fd --hidden --no-ignore --type d --max-depth 4 '^\.git$' "${roots[@]}" \
+    --exclude node_modules --exclude Library --exclude .cache |
+    sed 's|/\.git/\?$||' | sort -u |
+    fzf --reverse --prompt 'project> '
+) || exit 0
+[ -n "$repo" ] || exit 0
+
+# tmux rejects '.' and ':' in session names.
+session=$(basename "$repo" | tr '.:' '--')
+
+# Same repository name under two accounts: qualify with the parent directory.
+existing=$(tmux list-sessions -F '#{session_path}' -f "#{==:#{session_name},$session}" 2>/dev/null)
+if [ -n "$existing" ] && [ "$existing" != "$repo" ]; then
+  session="$(basename "$(dirname "$repo")" | tr '.:' '--')/$session"
+fi
+
+tmux has-session -t "=$session" 2>/dev/null || tmux new-session -d -s "$session" -c "$repo"
+tmux switch-client -t "=$session"
