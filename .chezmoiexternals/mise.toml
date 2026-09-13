@@ -1,6 +1,8 @@
 [".local/bin/mise"]
-type = "file"
-executable = true
+
 {{ $os := eq .chezmoi.os "darwin" | ternary "macos" .chezmoi.os }}
 {{ $arch := .chezmoi.arch }}
+type = "file"
+executable = true
+refreshPeriod = "168h"
 url = "https://mise.jdx.dev/mise-latest-{{$os}}-{{$arch}}"
