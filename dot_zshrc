@@ -22,6 +22,15 @@ export KEYTIMEOUT=1 # make switching between modes faster
 
 export LANG="en_US.UTF-8"
 
+
+# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export PATH="$HOME/.local/bin:$PATH"
+
+if command -v mise > /dev/null ; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
+
 # (neo)vim
 if command -v nvim > /dev/null ; then
   alias v="nvim"
@@ -31,15 +40,6 @@ elif command -v vim > /dev/null ; then
   alias v="vim"
   export EDITOR="vim"
   export VISUAL="vim"
-fi
-
-
-# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
-
-export PATH="$HOME/.local/bin:$PATH"
-
-if command -v mise > /dev/null ; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
 # ~~~~~~~~~~~~~~~ Starship ~~~~~~~~~~~~~~~~~~~~~~~~
