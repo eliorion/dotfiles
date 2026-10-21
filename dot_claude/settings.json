@@ -17,13 +17,20 @@
     "command": "bash \"/home/vscode/.claude/hooks/statusline-context.sh\""
   },
   "enabledPlugins": {
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "ponytail@ponytail": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "git",
+        "url": "git@github.com:DietrichGebert/ponytail.git"
       }
     }
   },

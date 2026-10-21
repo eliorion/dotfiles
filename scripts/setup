@@ -14,6 +14,10 @@ rtk init -g --auto-patch
 # Caveman - plugin + SessionStart/UserPromptSubmit hooks + statusline
 curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
 
+# Ponytail - plugin (default level ultra comes from chezmoi: ~/.config/ponytail/config.json)
+claude plugin marketplace add DietrichGebert/ponytail || true
+claude plugin install ponytail@ponytail || true
+
 # Graphify - install package via uv (uv provided by mise), then wire to Claude Code
 #uv tool install graphifyy
 #graphify install
@@ -22,6 +26,6 @@ curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.
 # Reassert chezmoi-managed ~/.claude/CLAUDE.md (rtk init -g overwrites it with @RTK.md only)
 #command -v chezmoi >/dev/null && chezmoi apply "$HOME/.claude/CLAUDE.md"
 
-# Build graphify knowledge graph for this dotfiles repo (AST-only, no LLM needed)
+# DISABLED - Build graphify knowledge graph for this dotfiles repo (AST-only, no LLM needed)
 # Run /graphify --update in Claude Code to add semantic layer
 #graphify update /workspaces/$DEVPOD_WORKSPACE_ID
