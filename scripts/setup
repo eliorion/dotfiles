@@ -18,6 +18,10 @@ curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.
 claude plugin marketplace add DietrichGebert/ponytail || true
 claude plugin install ponytail@ponytail || true
 
+# Worktrunk - Claude Code plugin: Claude's own worktree isolation goes through `wt` (and its
+# hooks), plus activity markers in `wt list`. The wt binary itself comes from mise (dot_config/mise).
+wt config plugins claude install || true
+
 # Graphify - install package via uv (uv provided by mise), then wire to Claude Code
 #uv tool install graphifyy
 #graphify install

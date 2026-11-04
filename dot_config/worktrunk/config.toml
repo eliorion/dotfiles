@@ -1,0 +1,4 @@
+# Worktrees live inside the repository: the devcontainer bind mount (and the workstation) see
+# them, and dot_config/git/ignore already ignores .worktrees/. The default is a sibling
+# directory, which in a devcontainer sits outside the mount and vanishes on rebuild.
+worktree-path = ".worktrees/{{ branch | sanitize }}"

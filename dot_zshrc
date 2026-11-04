@@ -31,6 +31,9 @@ if command -v mise > /dev/null ; then
   eval "$($HOME/.local/bin/mise activate zsh)"
 fi
 
+# worktrunk: lets `wt switch` change directory (agents use --no-cd and need none of this)
+command -v wt >/dev/null && eval "$(wt config shell init zsh)"
+
 # (neo)vim
 if command -v nvim > /dev/null ; then
   alias v="nvim"

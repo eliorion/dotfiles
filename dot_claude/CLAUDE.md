@@ -63,3 +63,10 @@ For multi-step tasks, state a brief plan:
 ```
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+## 5. Git worktrees: use worktrunk
+
+Use `wt` (worktrunk), not raw `git worktree`, for every worktree:
+- `wt switch -c <branch> --base origin/main --no-cd -y` creates one under `.worktrees/`; work in the path it prints.
+- `wt switch pr:<n> --no-cd -y` checks out a PR, `wt list` shows all of them, `wt remove <branch>` cleans up.
+- Never `wt merge` unless the repo says so: it merges into the local default branch, around the repo's PR flow and CI.

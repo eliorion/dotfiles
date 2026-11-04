@@ -20,6 +20,8 @@ Managed via [mise](https://mise.jdx.dev):
 | tmux | Terminal multiplexer |
 | starship | Shell prompt |
 | lazygit | Git TUI |
+| herdr | Terminal workspace for agents |
+| worktrunk (`wt`) | Git worktrees for parallel agents |
 | bat, fd, fzf, ripgrep | CLI utilities |
 | direnv | Environment management |
 | uv | Python toolchain |
@@ -34,6 +36,7 @@ Managed via [mise](https://mise.jdx.dev):
 3. **RTK** — token-optimizing proxy for Claude Code (`rtk init -g --auto-patch`)
 4. **Caveman** — Claude Code plugin for compressed output
 5. **Ponytail** — Claude Code plugin, smallest-change mode; default level `ultra` (`dot_config/ponytail/config.json`)
+6. **Worktrunk** — Claude Code plugin (`wt config plugins claude install`): Claude's worktree isolation goes through `wt`
 
 Graphify (install + first-boot graph build) is commented out in `scripts/setup`.
 
