@@ -101,6 +101,21 @@ A new project's `mise.toml` is ignored until you `mise trust` it.
 Sessions are saved every minute and restored on boot by resurrect + continuum, so
 a reboot is not a loss. `C-b C-s` saves now, `C-b C-r` restores.
 
+## worktrunk
+
+Git worktrees for parallel agents (`wt`, from mise; config `~/.config/worktrunk/config.toml`).
+Worktrees go under `<repo>/.worktrees/` so the devcontainer mount sees them. Agents use it too.
+
+| Command | Does |
+|---|---|
+| `wt switch -c <branch> --base origin/main` | New branch + worktree from the latest main, and cd into it |
+| `wt switch -c <branch> -x claude` | Same, then start Claude in it |
+| `wt switch pr:<n>` | Worktree on a PR's branch |
+| `wt list` / `wt list --full` | Every worktree with status (`--full`: CI + summaries) |
+| `wt remove [<branch>]` | Remove the worktree, delete the branch if merged |
+
+Never `wt merge` in a repo with a PR flow: it merges into the local main, around CI.
+
 ## workmux
 
 One worktree per task, each with its own tmux window and its own agent. Run these

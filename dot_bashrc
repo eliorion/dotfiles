@@ -22,6 +22,9 @@ if command -v mise >/dev/null; then
   eval "$(mise activate bash)"
 fi
 
+# worktrunk: lets `wt switch` change directory (agents use --no-cd and need none of this)
+command -v wt >/dev/null && eval "$(wt config shell init bash)"
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
